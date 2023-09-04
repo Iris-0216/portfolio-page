@@ -1,0 +1,134 @@
+<div class="page-container show-web">
+  <section #page class="page">
+    <div class="page-1">
+      <div class="title">Done</div>
+      <div class="nav-button">
+        <app-nav-button
+          label="in progress"
+          routerLink="in-progress"
+        ></app-nav-button>
+      </div>
+      <div class="card-container">
+        <app-pj-card
+          theme="green"
+          title="Shop App"
+          [tags]="webShopTags"
+          appName="web-shop"
+          routerLink="/works/shop"
+        ></app-pj-card>
+        <app-pj-card
+          theme="pink"
+          title="Recipe App"
+          [tags]="recipeTags"
+          appName="recipe"
+          routerLink="/works/recipe"
+        ></app-pj-card>
+      </div>
+    </div>
+  </section>
+  <section #page class="page">
+    <div class="page-2">
+      <div class="title">Done</div>
+      <div class="nav-button">
+        <app-nav-button
+          label="in progress"
+          routerLink="in-progress"
+        ></app-nav-button>
+      </div>
+      <div class="card-container">
+        <app-pj-card
+          theme="green"
+          title="Shop App"
+          [tags]="mobileShopTags"
+          appName="mobile-shop"
+          routerLink="/works/shop"
+        ></app-pj-card>
+        <app-pj-card
+          theme="yellow"
+          title="Moment App"
+          [tags]="momentTags"
+          appName="moment"
+          routerLink="/works/moment"
+        ></app-pj-card>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="narrow-page-container show-narrow">
+  <div class="nav-button">
+    <app-nav-button
+      label="in progress"
+      routerLink="in-progress"
+    ></app-nav-button>
+  </div>
+  <div class="pj-cards">
+    <app-pj-card
+      theme="green"
+      title="Shop App"
+      [tags]="webShopTags"
+      appName="web-shop"
+      routerLink="/works/shop"
+    ></app-pj-card>
+    <app-pj-card
+      theme="pink"
+      title="Recipe App"
+      [tags]="recipeTags"
+      appName="recipe"
+      routerLink="/works/recipe"
+    ></app-pj-card>
+    <app-pj-card
+      theme="green"
+      title="Shop App"
+      [tags]="mobileShopTags"
+      appName="mobile-shop"
+      routerLink="/works/shop"
+    ></app-pj-card>
+    <app-pj-card
+      theme="yellow"
+      title="Moment App"
+      [tags]="momentTags"
+      appName="moment"
+      routerLink="/works/moment"
+    ></app-pj-card>
+  </div>
+</div>
+
+<div class="mobile-page-container show-mobile">
+  <div class="nav-button">
+    <app-nav-button
+      label="in progress"
+      routerLink="in-progress"
+    ></app-nav-button>
+  </div>
+  <div class="pj-cards">
+    <app-mobile-pj-card
+      theme="green"
+      title="Shop App"
+      [tags]="webShopTags"
+      appName="web-shop"
+      routerLink="/works/shop"
+    ></app-mobile-pj-card>
+    <app-mobile-pj-card
+      theme="pink"
+      title="Recipe App"
+      [tags]="recipeTags"
+      appName="recipe"
+      routerLink="/works/recipe"
+    ></app-mobile-pj-card>
+    <app-mobile-pj-card
+      theme="green"
+      title="Shop App"
+      [tags]="mobileShopTags"
+      appName="mobile-shop"
+      routerLink="/works/shop"
+    ></app-mobile-pj-card>
+    <app-mobile-pj-card
+      theme="yellow"
+      title="Moment App"
+      [tags]="momentTags"
+      appName="moment"
+      routerLink="/works/moment"
+    ></app-mobile-pj-card>
+  </div>
+</div>

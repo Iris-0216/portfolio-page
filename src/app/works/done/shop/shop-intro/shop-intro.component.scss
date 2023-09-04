@@ -1,0 +1,79 @@
+@import 'src/scss/variables.scss';
+@import 'src/scss/mixins.scss';
+
+.page{
+  width: 100vw;
+  height: 100vh;
+  background-color: $card-green-bg;
+  position: relative;
+  overflow: hidden;
+
+  & .title{
+    position: absolute;
+    left: 1.125rem;
+    top: 50%;
+    transform-origin: center;
+    transform: translateY(-50%) rotate(-90deg);
+    color: $card-green-text-main;
+    font-family: 'Alegreya Sans SC';
+    font-size: 3rem;
+    line-height: 75%;
+  }
+
+  & .intro-image{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+
+    & img{
+      width: 73vw;
+      height: auto;
+
+      &.mobile{
+        display: none;
+      }
+    }
+  }
+
+  @include back-btn-layout;
+}
+
+@media (max-width:767px) {
+  .page{
+    & .title{
+      font-size: 2rem;
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%);
+    }
+    & .intro-image{
+      & img{
+        width: 92vw;
+      }
+    }
+    & .back-btn{
+      left: 2rem;
+      top: 78vh;
+    }
+  }
+}
+
+
+@media (max-width:575px) {
+  .page{
+    & .title{
+      top: 20%;
+    }
+
+    & .intro-image{
+      & img.web{
+        display: none;
+      }
+
+      & img.mobile{
+        display: block;
+      }
+    }
+  }
+}

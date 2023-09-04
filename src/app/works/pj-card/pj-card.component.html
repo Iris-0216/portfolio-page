@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <div class="pj-card" [class]="theme">
+    <div class="desc">
+      <div class="title">{{ title }}</div>
+      <div class="tags">
+        <ng-container *ngFor="let tag of tags">
+          <div class="badge">{{ tag }}</div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="image">
+      <img src="assets/images/card-{{ appName }}.svg" alt="image" />
+    </div>
+  </div>
+
+  <div class="cover cover-{{ theme }}">
+    <ng-container *ngIf="type === 'done'; else InProgress">
+      <div class="text hover-effect">View</div>
+      <div class="icon">
+        <img src="assets/icons/mouse-{{ theme }}.svg" alt="mouse" />
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #InProgress>
+  <div class="paragraph">
+    An App to track your reading process to get more satisfaction.
+  </div>
+</ng-template>

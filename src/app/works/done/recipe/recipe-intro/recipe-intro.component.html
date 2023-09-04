@@ -1,0 +1,16 @@
+<div class="page" (panup)="onSwipeUp()">
+  <div class="desc-box">
+    <div class="title">Recipe Book</div>
+    <div class="desc">
+      Add your own recipes and convert any recipe into a shopping list with one
+      click.
+    </div>
+  </div>
+  <div class="slider">
+    <app-slider [imageUrls]="imageUrls" class="show-web"></app-slider>
+    <app-slider [imageUrls]="smallImageUrls" class="show-mobile"></app-slider>
+  </div>
+  <div class="back-btn" routerLink="/works">
+    <app-back-button></app-back-button>
+  </div>
+</div>

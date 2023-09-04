@@ -1,0 +1,8 @@
+@import 'src/scss/mixins.scss';
+
+@include pj-intro-common-layout;
+
+
+@media (max-width:767px) {
+  @include pj-intro-common-layout-small;
+}

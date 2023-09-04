@@ -1,0 +1,188 @@
+@import 'src/scss/variables.scss';
+
+.page-container{
+ position: relative;
+  & .bg-1{
+    background-color: $bg-primary-3;
+  }
+  & .bg-2{
+    background-color: $card-green-bg;
+  }
+  & .bg-3{
+      background-color: $card-green-bg;
+  }
+
+  & .go-next{
+    color:$text-primary;
+    position: absolute;
+    right: 10vw;
+    top: 85vh;
+    display: none;
+  }
+
+  & .go-prev{
+    color:$text-primary;
+    position: absolute;
+    left: 10vw;
+    top: 85vh;
+    display: none;
+  }
+
+}
+
+.page {
+  position: absolute;
+  width: 100vw;
+  // make hover effect of chart work properly
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s 0.5s;
+
+  & .about-me{
+    transform: translateY(18vh);
+    transition: all 2s 0.5s;
+  }
+
+  &.show {
+    opacity: 1;
+    height: 100vh;
+    &.bg-1{
+      background-image: url('../../assets/images/texture.png');
+      background-blend-mode: overlay;
+    }
+    & .about-me{
+      transform: translateY(0);
+    }
+  }
+}
+
+
+.about-me{
+  text-align: center;
+  position: relative;
+
+  & .paragraphs{
+    color:$text-primary;
+    width: 75vw;
+    position: absolute;
+    top: 22vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "IBM Plex Mono Light";
+    font-size: min(2rem, 2vw);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 40px */
+
+    & .p2 {
+      margin-top: 4.5vh;
+      margin-bottom: 12.6vh;
+    }
+  }
+}
+
+.skills-1{
+  position: relative;
+  height: 100%;
+
+  & img{
+    width: 54vw;
+    height: auto;
+    position: absolute;
+    top:-15vh;
+    right: 0;
+  }
+
+  & .title{
+    font-size: 2rem;
+    font-family: 'Alegreya Sans SC';
+    position: absolute;
+    bottom:18vh;
+    right:1.125rem;
+    line-height: 112.5%;
+    color: $card-green-text-main;
+    display: none;
+  }
+
+  & .my-chart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.skills-2{
+  position: relative;
+  height: 100%;
+
+  & img{
+    width: 54vw;
+    height: auto;
+    position: absolute;
+    top:-15vh;
+    right: 0;
+  }
+
+  & .table-container{
+    position:absolute;
+    top:50vh;
+    left:50%;
+    transform: translate(-50%,-45%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    row-gap: 3.5rem;
+    justify-items: center;
+    justify-content: flex-start;
+    align-content: space-between;
+    width: 90vw;
+    height: 66vh;
+    overflow-y: scroll;
+  }
+}
+
+
+@media (max-width:991px) {
+  .about-me{
+    & .paragraphs{
+      font-size: 1.125rem;
+      width: 90vw;
+    }
+  }
+}
+
+
+@media (max-width:991px) {
+  .skills-1{
+    & img{
+      display: none;
+    }
+
+    & .title{
+      display: inline-block;
+    }
+  }
+  .skills-2{
+    & img{
+      display: none;
+    }
+  }
+}
+
+@media (max-width:575px) {
+  .page-container{
+
+    & .go-next{
+      display: inline-block;
+    }
+    & .go-prev{
+      display: inline-block;
+    }
+  }
+
+  .skills-1{
+    & .my-chart{
+      width: 90vw;
+    }
+  }
+}

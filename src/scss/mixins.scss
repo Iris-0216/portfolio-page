@@ -1,0 +1,150 @@
+@import './variables.scss';
+
+@mixin worksTitleStyle{
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  font-family: 'Share Tech Mono';
+  font-size: 6rem;
+  line-height: 125%; /* 120px */
+  text-transform: capitalize;
+  background: var(--top-gradient-l, linear-gradient(180deg, #8BD2BD 0%, #DBF3EC 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin navButtonLabelStyle {
+  color: $text-primary;
+  font-family: 'IBM Plex Mono Regular';
+  font-size: 1rem;
+  line-height: 125%; /* 20px */
+  text-transform: capitalize;
+}
+
+@mixin hoverUnderlineAnimation {
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $text-primary;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover{
+    &:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+@mixin back-btn-layout{
+  & .back-btn{
+    position: absolute;
+    left: 6rem;
+    top: 87vh;
+    z-index: 900;
+  }
+}
+
+
+@mixin pj-intro-common-layout {
+  .page{
+    width: 100vw;
+    height: 100vh;
+    background-color: $card-green-bg;
+    position: relative;
+
+    & .desc-box{
+      width: 25rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 3.5rem;
+      position: absolute;
+      top:50%;
+      left:3.75rem;
+      transform: translateY(-50%);
+
+      & .title{
+        color: $card-green-text-main;
+        font-family: 'Alegreya Sans SC';
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+      }
+      & .desc{
+        color: $text-primary;
+        font-family: 'IBM Plex Mono Regular';
+        font-size: 1.3rem;
+        line-height: 125%;
+      }
+    }
+
+    & .slider{
+      padding-left: 32.75rem;
+      padding-top: calc((100vh - 43.5rem)/2);
+
+      & .show-mobile{
+        display: none;
+      }
+    }
+
+    @include back-btn-layout;
+  }
+}
+
+@mixin pj-intro-common-layout-small {
+  .page{
+
+    & .desc-box{
+      width: 82vw;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      position: absolute;
+      left:50%;
+      top: 16vh;
+      transform: translateX(-50%);
+
+      & .title{
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+      }
+      & .desc{
+        font-size: 1rem;
+      }
+    }
+
+    & .slider{
+      padding-left: 2rem;
+      padding-top: 38vh;
+
+      & .show-web{
+        display: none;
+      }
+
+      & .show-mobile{
+        display: block;
+      }
+    }
+
+    & .back-btn{
+      left: 2rem;
+      top: 78vh;
+    }
+  }
+}
+
+@mixin video-page-layout{
+  width: 100vw;
+  height: 100vh;
+  background-color: $card-green-bg;
+  position: relative;
+}

@@ -1,0 +1,15 @@
+@import 'src/scss/variables.scss';
+@import 'src/scss/mixins.scss';
+
+.btn-container {
+  display:flex;
+  padding: 0.5rem 0px;
+  align-items:center;
+  gap: 1rem;
+
+  @include hoverUnderlineAnimation;
+
+  & .text{
+    @include navButtonLabelStyle;
+  }
+}

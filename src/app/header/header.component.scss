@@ -1,0 +1,18 @@
+@import 'src/scss/variables.scss';
+
+.header{
+  width: fit-content;
+  height: 45px;
+  padding-left: 6.25rem;
+  font-family: Ysabeau SC;
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 125%;
+  color:$text-primary;
+}
+
+@media (max-width:575px) {
+  .header{
+    padding-left: 2rem;
+  }
+}

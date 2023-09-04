@@ -1,0 +1,37 @@
+<div class="page" (pandown)="onSwipeDown()" (panup)="onSwipeUp()">
+  <div class="page-content">
+    <div class="title">Color Palette</div>
+    <div class="colors">
+      <div class="row-1">
+        <div class="group">
+          <div class="category">primary</div>
+          <div class="color-boxes">
+            <app-color-box [index]="1"></app-color-box>
+            <app-color-box [index]="2"></app-color-box>
+            <app-color-box [index]="3"></app-color-box>
+          </div>
+        </div>
+        <div class="right">
+          <div class="group">
+            <div class="category">secondary</div>
+            <app-color-box [index]="4"></app-color-box>
+          </div>
+          <div class="group">
+            <div class="category">accent</div>
+            <app-color-box [index]="5"></app-color-box>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="category">neutral</div>
+        <div class="color-boxes">
+          <app-color-box [index]="6"></app-color-box>
+          <app-color-box [index]="7"></app-color-box>
+          <app-color-box [index]="8"></app-color-box>
+          <app-color-box [index]="9"></app-color-box>
+          <app-color-box [index]="10"></app-color-box>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

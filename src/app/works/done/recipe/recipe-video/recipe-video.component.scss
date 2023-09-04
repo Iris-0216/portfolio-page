@@ -1,0 +1,7 @@
+@import 'src/scss/variables.scss';
+@import 'src/scss/mixins.scss';
+
+.page{
+  @include video-page-layout;
+}
+

@@ -1,0 +1,54 @@
+<div class="page-container">
+  <section #page class="page bg-1">
+    <div class="about-me">
+      <div class="paragraphs">
+        <div class="p1">Hi，I’m Iris.</div>
+        <div class="p2">
+          I’m a full-stack developer who loves creating beautiful and
+          user-friendly websites and apps. Especially work a lot with
+          Typescript,JavaScript, Angular and Node JS.
+        </div>
+        <div class="p3">
+          I’ve been working in the field for over five years and I‘m good at
+          problem-solving and I love to learn new things and skills.
+        </div>
+      </div>
+      <div class="go-next">
+        <i class="bi bi-chevron-down" (click)="goNext()"></i>
+      </div>
+    </div>
+  </section>
+  <section #page class="page bg-2">
+    <div class="skills-1">
+      <img src="assets/images/skills.png" alt="title-image" />
+      <div class="title">Skills</div>
+      <div class="my-chart">
+        <ng-container *ngIf="index === 1">
+          <app-bar-chart></app-bar-chart
+        ></ng-container>
+      </div>
+      <div class="go-next">
+        <i class="bi bi-chevron-down" (click)="goNext()"></i>
+      </div>
+      <div class="go-prev">
+        <i class="bi bi-chevron-up" (click)="goPrev()"></i>
+      </div>
+    </div>
+  </section>
+  <section #page class="page bg-3">
+    <div class="skills-2">
+      <img src="assets/images/skills.png" alt="title-image" />
+      <div class="table-container">
+        <ng-container *ngFor="let table of tables">
+          <app-skill-table
+            [title]="table.title"
+            [items]="table.items"
+          ></app-skill-table>
+        </ng-container>
+      </div>
+      <div class="go-prev">
+        <i class="bi bi-chevron-up" (click)="goPrev()"></i>
+      </div>
+    </div>
+  </section>
+</div>

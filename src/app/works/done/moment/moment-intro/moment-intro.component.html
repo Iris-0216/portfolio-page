@@ -1,0 +1,13 @@
+<div class="page" (panup)="onSwipeUp()">
+  <div class="desc-box">
+    <div class="title">Moment App</div>
+    <div class="desc">A pwa and an Instagram alternative for personal use.</div>
+  </div>
+  <div class="slider">
+    <app-slider [imageUrls]="imageUrls" class="show-web"></app-slider>
+    <app-slider [imageUrls]="smallImageUrls" class="show-mobile"></app-slider>
+  </div>
+  <div class="back-btn" routerLink="/works">
+    <app-back-button></app-back-button>
+  </div>
+</div>

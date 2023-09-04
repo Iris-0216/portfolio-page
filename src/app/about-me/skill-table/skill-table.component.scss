@@ -1,0 +1,41 @@
+@import 'src/scss/variables.scss';
+
+$table-width:17.5rem;
+$title-height:3rem;
+$item-height:2.125rem;
+
+.table{
+  display: flex;
+  flex-direction: column;
+  color: $text-primary;
+  width: $table-width;
+  margin: 0;
+
+  & .title{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: $title-height;
+    background-color: $bg-primary;
+    border-radius: 0.5rem 0.5rem 0px 0px;
+    font-family: 'IBM Plex Mono Medium';
+    font-size: 1rem;
+  }
+
+  & .items{
+    & .item{
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 0px;
+      height: $item-height;
+      background-color: #ffffff;
+      border-right: 1px solid $neutral-700;
+      border-bottom: 1px solid $neutral-700;
+      border-left: 1px solid $neutral-700;
+      font-family: 'IBM Plex Mono Regular';
+      font-size: 0.875rem;
+    }
+  }
+}

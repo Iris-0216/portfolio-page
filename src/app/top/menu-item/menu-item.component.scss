@@ -1,0 +1,31 @@
+@import 'src/scss/variables.scss';
+@import 'src/scss/mixins.scss';
+
+.item{
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+
+  @include hoverUnderlineAnimation;
+
+  & .text{
+    color:$text-primary;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+    text-transform: uppercase;
+    padding-bottom: 0.3rem;
+  }
+}
+
+
+@media (max-width:414px) {
+  .item{
+    & .text{
+      font-size: 0.875rem;
+    }
+  }
+}
+

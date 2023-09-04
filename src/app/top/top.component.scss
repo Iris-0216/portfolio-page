@@ -1,0 +1,168 @@
+@import 'src/scss/variables.scss';
+.wrapper{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  text-align: center;
+  overflow: hidden;
+
+  & img{
+    width: 100vw;
+    max-width: 1440px;
+    height: auto;
+
+    -webkit-animation: slidein 16s;
+    animation: slidein 16s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+
+  & .menu-works, & .menu-about-me, & .menu-contact{
+    z-index: 900;
+  }
+
+  & .menu-works{
+    position: absolute;
+    top:80vh;
+    right: 4rem;
+  }
+
+  & .menu-about-me{
+    position:absolute;
+    top: calc(109px + 60vh);
+    left: 5rem;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+  }
+
+  & .menu-contact{
+    position:absolute;
+    top: calc(109px + 30vh);
+    left: 5rem;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+  }
+
+  & .intro{
+    width: max-content;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    color:white;
+    font-family: Montserrat;
+    font-size: 4.5vw;
+    font-weight: 400;
+    line-height: 125%;
+  }
+}
+
+@media (max-width:767px) {
+  .wrapper{
+    & img{
+      width: 52rem;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-60%,-50%);
+
+      -webkit-animation: slidein-mobile 15s;
+      animation: slidein-mobile 15s;
+
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+
+    }
+  }
+}
+
+@media (max-width:414px) {
+  .wrapper{
+    & img{
+      width: 45rem;
+      height: auto;
+      position: absolute;
+      transform: translate(-64%,-50%);
+      // left: -60vw;
+    }
+
+    & .menu-works{
+      left: 2rem;
+    }
+
+    & .menu-contact{
+      top: 2.8rem;
+      left: auto;
+      right: 2rem;
+      transform-origin: bottom right;
+    }
+
+    & .menu-about-me{
+      top: 58vh;
+      left: auto;
+      right: 2rem;
+      transform-origin: bottom right;
+    }
+  }
+}
+@-webkit-keyframes slidein {
+  from {
+    object-position: -1.5vw 5vh;
+    background-size:1440px;
+    transform: scale(1.05);
+  }
+  to {
+    object-position: -7vw -2vh;
+    background-size:1200px;
+    transform: scale(1.05);
+  }
+}
+
+  @keyframes slidein {
+  from {
+    object-position: -1.5vw 5vh;
+    background-size:1440px;
+    transform: scale(1.05);
+  }
+  to {
+    object-position: -7vw -2vh;
+    background-size:1200px;
+    transform: scale(1.05);
+  }
+}
+
+@-webkit-keyframes slidein-mobile {
+  from {
+      object-position: center;
+     }
+  to {
+      object-position: 50px 64px;
+    }
+}
+
+  @keyframes slidein-mobile {
+  from {
+    object-position: center;
+   }
+  to {
+    object-position: 50px 64px;
+  }
+}

@@ -1,0 +1,7 @@
+<div class="keen-slider" #sliderRef>
+  <ng-container *ngFor="let url of imageUrls; let i = index">
+    <div class="keen-slider__slide number-slide">
+      <img [src]="url" alt="app-image" />
+    </div>
+  </ng-container>
+</div>

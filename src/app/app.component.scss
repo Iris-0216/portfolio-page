@@ -1,0 +1,56 @@
+@import 'src/scss/variables.scss';
+
+.full-page{
+  position: relative;
+
+  & .header-wrapper{
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 1000;
+  }
+}
+
+.cursor {
+  height: var(--size);
+  width:  var(--size);
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cursor.cursor-follower {
+  height: var(--size-follower);
+  width:  var(--size-follower);
+  background: linear-gradient(to right, $cursor-gradient-1, $cursor-gradient-2);
+  opacity: 60%;
+  transition: top .25s, left .25s,
+              width .5s, height .5s;
+  transition-timing-function: ease-out;
+}
+
+.cursor.cursor-dot {
+  background: linear-gradient(to right, $cursor-gradient-3, $cursor-gradient-4);
+  transition: width .25s, height .25s;
+}
+
+.cursor-follower.focus {
+  --size-follower: 100px;
+}
+
+.cursor-dot.focus {
+  --size: 0;
+}
+
+
+@media (max-width:575px) {
+  .full-page{
+
+    & .header-wrapper{
+      top: 3rem;
+    }
+  }
+}
+

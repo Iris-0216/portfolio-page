@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <video
+    #video
+    (click)="onVideoClick($event)"
+    [ngClass]="{ mobile: appName === 'shop' }"
+  >
+    <source src="assets/videos/{{ appName }}.mp4" type="video/mp4" />
+  </video>
+  <img
+    #playButton
+    id="play-button"
+    src="assets/icons/play-button.svg"
+    alt="button"
+    (click)="onBtnClick($event)"
+  />
+</div>

@@ -1,0 +1,20 @@
+<div class="page" (pandown)="onSwipeDown()">
+  <!-- webShop -->
+  <ng-container *ngIf="type === 'web'">
+    <app-video appName="webShop"></app-video>
+    <div class="nav-btn">
+      <app-nav-button
+        label="Mobile App"
+        (click)="switchType()"
+      ></app-nav-button>
+    </div>
+  </ng-container>
+
+  <!-- mobileShop -->
+  <ng-container *ngIf="type !== 'web'">
+    <app-video appName="shop"></app-video>
+    <div class="nav-btn">
+      <app-nav-button label="Web App" (click)="switchType()"></app-nav-button>
+    </div>
+  </ng-container>
+</div>

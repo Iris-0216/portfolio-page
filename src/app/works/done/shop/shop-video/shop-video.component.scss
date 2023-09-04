@@ -1,0 +1,26 @@
+@import 'src/scss/variables.scss';
+@import 'src/scss/mixins.scss';
+
+.page{
+  @include video-page-layout;
+
+  & .nav-btn{
+    position: absolute;
+    right: 6.25rem;
+    bottom: 8vh;
+    z-index: 900;
+  }
+}
+
+
+@media (max-width:767px) {
+  .page{
+
+    & .nav-btn{
+      left: 50vw;
+      right: auto;
+      transform: translateX(-50%);
+
+    }
+  }
+}

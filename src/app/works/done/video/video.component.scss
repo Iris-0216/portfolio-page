@@ -1,0 +1,51 @@
+@import 'src/scss/variables.scss';
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  & video{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:65vw;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 0.5rem 0.5rem 0px 0px$bg-primary;
+    border: 3px solid $bg-primary;
+    border-radius: 0.75rem;
+
+    &.mobile{
+      height: 80vh;
+      width: auto;
+    }
+  }
+
+  & #play-button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+}
+
+
+.hide{
+  display:none;
+}
+
+@media (max-width:767px) {
+  .wrapper{
+    & video{
+      width: 86vw;
+
+      &.mobile{
+        height: 72vh;
+        width: auto;
+      }
+    }
+  }
+}

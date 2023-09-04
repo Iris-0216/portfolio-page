@@ -1,0 +1,178 @@
+@import 'src/scss/variables.scss';
+
+.wrapper{
+  position: relative;
+
+  & .pj-card{
+    width: 21.9375rem;
+    height: 24.57rem;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+
+    & .desc{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      & .title{
+        font-family: 'Alegreya Sans SC';
+        font-size: 2rem;
+        line-height: 2.25rem;
+      }
+
+      & .tags{
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 12px 8px;
+        flex-wrap: wrap;
+
+        & .badge{
+          border-radius: 6.35rem;
+          display: flex;
+          height: 2.25rem;
+          padding: 0px 1rem;
+          justify-content: center;
+          align-items: center;
+          width: fit-content;
+          font-family: 'Quicksand';
+          font-size: 0.75rem;
+          font-weight: 500;
+          line-height: 125%;
+        }
+      }
+    }
+
+    & .image{
+      & img{
+        width: 180px;
+        height: auto;
+      }
+    }
+  }
+
+  & .green{
+    background-color: $card-green-bg;
+
+    & .desc{
+      & .title{
+        color: $card-green-text-main;
+      }
+
+      & .tags{
+        & .badge{
+          background-color: $card-green-bg-dark;
+          color:$card-green-text-secondary;
+        }
+      }
+    }
+
+  }
+
+  & .pink{
+    background-color: $card-pink-bg;
+
+    & .desc{
+      & .title{
+        color: $card-pink-text-main;
+      }
+
+      & .tags{
+        & .badge{
+          background-color: $card-pink-bg-dark;
+          color:$card-pink-text-secondary;
+        }
+      }
+    }
+  }
+
+  & .yellow{
+    background-color: $card-yellow-bg;
+
+    & .desc{
+      & .title{
+        color: $card-yellow-text-main;
+      }
+
+      & .tags{
+        & .badge{
+          background-color: $card-yellow-bg-dark;
+          color:$card-yellow-text-secondary;
+        }
+      }
+    }
+  }
+
+  & .cover{
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    width: 21.9375rem;
+    height: 24.57rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1.25rem;
+    opacity: 0;
+    transition: all 0.6s 0.2s;
+
+    & .text{
+      font-family: 'Montserrat';
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 2.25rem;
+      text-transform: uppercase;
+      transform: translateY(15.7rem);
+      transition: all 0.7s 0.2s;
+    }
+
+    & .icon{
+      transform: translateY(15.7rem);
+      transition: all 0.7s 0.2s;
+    }
+
+    & .paragraph{
+      color: $card-green-text-secondary;
+      text-align: center;
+      font-family: 'IBM Plex Mono Light';
+      font-size: 1.5rem;
+      width: 77.6%;
+      line-height: 125%;
+    }
+
+    &:hover{
+      opacity: 1;
+
+      & .text{
+        transform: translateY(0);
+        z-index: 900;
+      }
+
+      & .icon{
+        transform: translateY(0);
+      }
+    }
+  }
+
+  & .cover-green{
+    background: $cover-bg-green;
+    color: $card-green-text-secondary;
+  }
+
+  & .cover-pink{
+    background: $cover-bg-pink;
+    color: $card-pink-text-secondary;
+  }
+
+  & .cover-yellow{
+    background: $cover-bg-yellow;
+    color: $card-yellow-text-secondary;
+  }
+}

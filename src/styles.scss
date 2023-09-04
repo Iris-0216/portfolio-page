@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+  /* without the browser adding any margins or paddings */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root { --size: 15px; --size-follower: 42px;}
+html {
+  cursor: none;
+  user-select: none;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+
+// Fonts
+@font-face {
+  font-family: "Alegreya Sans SC";
+  src: local("Alegreya Sans SC"), url(./assets/fonts/AlegreyaSansSC-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Medium";
+  src: local("IBM Plex Mono Medium"), url(./assets/fonts/IBMPlexMono-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Regular";
+  src: local("IBM Plex Mono Regular"), url(./assets/fonts/IBMPlexMono-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Light";
+  src: local("IBM Plex Mono Light"), url(./assets/fonts/IBMPlexMono-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Quicksand";
+  src: local("Quicksand"), url(./assets/fonts/Quicksand-VariableFont_wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Readex Pro";
+  src: local("Readex Pro"), url(./assets/fonts/ReadexPro-VariableFont_HEXP,wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Share Tech Mono";
+  src: local("Share Tech Mono"), url(./assets/fonts/ShareTechMono-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Ysabeau SC";
+  src: local("Ysabeau SC"), url(./assets/fonts/YsabeauSC-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Rounded Mplus 1c";
+  src: local("Rounded Mplus 1c"), url(./assets/fonts/MPLUSRounded1c-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url(./assets/fonts/Roboto-Light.ttf) format("truetype");
+}

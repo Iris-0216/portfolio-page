@@ -1,0 +1,143 @@
+@import 'src/scss/variables.scss';
+@import 'src/scss/mixins.scss';
+
+.page{
+  width: 100vw;
+  height: 100vh;
+  background-color: $card-green-bg;
+
+  & .title-box{
+    position: absolute;
+    top:7vh;
+    right:6.25rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+
+
+    & .title{
+      color: $card-green-text-main;
+      font-family: 'Alegreya Sans SC';
+      font-size: 3rem;
+      line-height: 112.5%;
+      text-transform: capitalize;
+    }
+  }
+
+  & .prototype{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-42%);
+    gap: 2rem;
+
+    & .nav-pills{
+      flex-direction: column;
+      gap:1.25rem;
+      font-family: 'Quicksand';
+      font-weight: 600;
+      font-size: 0.875rem;
+
+      & .nav-link {
+        color:$card-green-text-main;
+        border-radius: 6.25rem;
+        max-width: 6rem;
+      }
+    }
+
+    & .nav-link.active, .nav-pills .show > .nav-link{
+      color:$card-green-text-main;
+      font-size: 1rem;
+      background-color: $neutral-100;
+    }
+
+    & .tab-content{
+      & a{
+        cursor: none;
+        & img{
+          width: 65vw;
+          height: auto;
+
+          &.mobile{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width:767px) {
+  .page{
+
+    & .title-box{
+
+      & .title {
+        font-size: 1.8rem;
+      }
+    }
+
+    & .prototype{
+      flex-direction: column;
+
+      & .nav-pills{
+        flex-direction: row;
+        font-size: 0.75rem;
+
+        & .nav-link {
+          padding: 3px 12px;
+
+        }
+      }
+
+      & .nav-link.active, .nav-pills .show > .nav-link{
+        font-size: 0.875rem;
+      }
+
+
+      & .tab-content{
+        & a{
+          & img{
+            width: 82vw;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:575px) {
+  .page{
+
+    & .title-box{
+      top: 20vh;
+      left: 12vw;
+      gap: 1rem;
+      & .title {
+        font-size: 1.5rem;
+      }
+    }
+
+    & .prototype{
+      & .tab-content{
+        & a{
+          cursor: none;
+          & img{
+            width: 80vw;
+            height: auto;
+
+            &.web{
+              display: none;
+            }
+
+            &.mobile{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

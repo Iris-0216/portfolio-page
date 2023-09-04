@@ -1,0 +1,47 @@
+@import 'src/scss/variables.scss';
+.wrapper{
+  position: relative;
+
+
+  & .back{
+    position: absolute;
+    left:7.5625rem;
+    height: 2.5rem;
+    width: 1px;
+    background-color: #D0F4BA;
+    opacity: 0;
+    transition: all 0.35s ease-in-out;
+  }
+
+  & .button-container{
+    position: absolute;
+    display: flex;
+    width: 12.3125rem;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 1rem;
+    color:$card-green-text-main;
+
+    & .label{
+    font-family: 'IBM Plex Mono Regular';
+    font-size: 1rem;
+    line-height: 125%;
+    text-transform: capitalize;
+    }
+  }
+
+
+  &:hover{
+
+    & .back{
+      height: 2.5rem;
+      width: 6rem;
+      background-color: #D0F4BA;
+      left:1.625rem;
+      opacity: 1;
+    }
+  }
+
+}
+
+

@@ -1,0 +1,15 @@
+.number-slide{
+  height: fit-content;
+}
+
+
+@media (max-width:767px) {
+  .number-slide{
+
+    & img{
+      height: 40vh;
+      width: auto;
+    }
+  }
+}
+
